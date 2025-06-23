@@ -36,18 +36,16 @@ p {
   object-fit: cover;
 }
 
-#info {
-  padding: 0 1.25em;
-}
-
 #description {
   font-weight: 700;
   color: hsl(217, 19%, 35%);
   margin: 1.25em 0.625em;
+  padding: 0 1.25em;
 }
 
 #info > p {
   margin: 1.25em 0.625em;
+  padding: 0 1.25em;
 }
 
 #michelle {
@@ -60,8 +58,8 @@ p {
 #author {
   display: flex;
   align-items: center;
-  margin-bottom: 1em;
-  padding: 0.25em;
+  padding: 0 1.25em 1em;
+  position: relative; /* Needed for absolute positioning of #socials */
 }
 
 #author-info > p {
@@ -81,19 +79,49 @@ time {
   justify-content: center;
   background-color: hsl(210, 46%, 95%);
   border-radius: 50%;
-  width: 2.5em;
-  height: 2.5em;
+  width: 2em;
+  height: 2em;
   margin-left: auto;
   border: none;
+  /* position: relative; */
+  /* z-index: 1; */
+  margin-top: 0.75em;
 }
 
 #share-button:hover {
-  background-color: hsl(212, 23%, 69%);
+  background-color: hsl(214, 17%, 51%);
   color: hsl(210, 46%, 85%);
-   cursor: pointer;
+  cursor: pointer;
 }
 
 #share:hover {
   filter: brightness(0) invert(1);
- 
+  z-index: 1;
+}
+
+
+
+#socials {
+  background-color: hsl(217, 19%, 35%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 1.75em;
+  text-transform: uppercase;
+  color: hsl(214, 17%, 51%);
+  letter-spacing: 6px;
+  font-weight: 500;
+  /* display: none; */
+}
+
+#socials > a {
+  color: hsl(214, 17%, 51%);
+  text-decoration: none;
+  margin-right: 0.05em;
+  margin-left: 1.25em;
 }
