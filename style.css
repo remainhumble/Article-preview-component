@@ -83,6 +83,8 @@ time {
   margin-left: auto;
   border: none;
   margin-top: 0.75em;
+  z-index: 2;
+  position: relative;
 }
 
 #share {
@@ -91,17 +93,23 @@ time {
   color: hsl(214, 17%, 51%);
 }
 
-#share:active {
-  position: relative;
-  z-index: 3;
+#share-button:hover {
+  cursor: pointer;
+  background-color: hsl(214, 17%, 51%);
 }
 
-#share-button:hover {
+#share-button:hover #share {
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+}
+
+#share.active {
   cursor: pointer;
 }
 
 #share-button:active {
-  color: hsl(210, 46%, 95%);
+  cursor: pointer;
+  background-color: hsl(214, 17%, 51%);
 }
 
 #socials {
@@ -137,7 +145,6 @@ time {
 }
 
 #socials > a {
-  color: hsl(214, 17%, 51%);
   text-decoration: none;
   margin-right: 0.05em;
   margin-left: 1.25em;
