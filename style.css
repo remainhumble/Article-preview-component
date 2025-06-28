@@ -86,30 +86,19 @@ time {
   z-index: 2;
   position: relative;
 }
+#share-button.active {
+  background-color: hsl(212, 23%, 69%);
+}
+
+#share-button.active #share{
+ filter: brightness(0) saturate(100%) invert(97%) sepia(2%) saturate(3819%) hue-rotate(170deg) brightness(108%) contrast(93%);
+}
 
 #share {
   position: relative;
   z-index: 2;
   color: hsl(214, 17%, 51%);
-}
-
-#share-button:hover {
   cursor: pointer;
-  background-color: hsl(214, 17%, 51%);
-}
-
-#share-button:hover #share {
-  cursor: pointer;
-  filter: brightness(0) invert(1);
-}
-
-#share.active {
-  cursor: pointer;
-}
-
-#share-button:active {
-  cursor: pointer;
-  background-color: hsl(214, 17%, 51%);
 }
 
 #socials {
