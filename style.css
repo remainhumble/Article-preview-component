@@ -90,8 +90,9 @@ time {
   background-color: hsl(212, 23%, 69%);
 }
 
-#share-button.active #share{
- filter: brightness(0) saturate(100%) invert(97%) sepia(2%) saturate(3819%) hue-rotate(170deg) brightness(108%) contrast(93%);
+#share-button.active #share {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(2%) saturate(3819%)
+    hue-rotate(170deg) brightness(108%) contrast(93%);
 }
 
 #share {
@@ -137,4 +138,38 @@ time {
   text-decoration: none;
   margin-right: 0.05em;
   margin-left: 1.25em;
+}
+
+@media (min-width: 376px) {
+  #container {
+    display: flex;
+    flex-direction: row;
+    width: 45rem;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  #drawers > img {
+    height: 100%;
+
+  }
+
+  #info {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  #description {
+    margin: 0;
+  }
+
+  #info > p {
+    margin: 1.25em 0;
+  }
+
+  #author {
+    padding-bottom: 0;
+  }
 }
