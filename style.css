@@ -77,6 +77,7 @@ time {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   border-radius: 50%;
   width: 2em;
   height: 2em;
@@ -84,7 +85,6 @@ time {
   border: none;
   margin-top: 0.75em;
   z-index: 2;
-  position: relative;
 }
 #share-button.active {
   background-color: hsl(212, 23%, 69%);
@@ -96,7 +96,6 @@ time {
 }
 
 #share {
-  position: relative;
   z-index: 2;
   color: hsl(214, 17%, 51%);
   cursor: pointer;
@@ -169,36 +168,32 @@ time {
   }
 
   #author {
-    padding-bottom: 0;
+    position: relative;
   }
-
-  #socials {
-position: absolute;
-bottom: 100%;
-left: -90%;
-  z-index: 10;
-    width: 100%;
-    height: 3.5em;
-    border-radius: 10px;
+  #author-info {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-transform: uppercase;
-background: hsl(217, 19%, 35%);
-    letter-spacing: 6px;
-    font-weight: 500;
-    display: none; /* Initially hidden */
+    flex-direction: column;
   }
 
-  #socials:after {
-    content: "";
+  #share-button {
     position: absolute;
-    display: block;
-    border-style: solid;
-    border-color: hsl(217, 19%, 35%) transparent;
-    border-width: 20px 20px 0;
-    bottom: -20px;
-    left: 50%;
-    margin-left: -20px;
+    top: 1.25em;
+    right: 1.25em;
+  }
+
+  #socials.show {
+    display: flex; /* Show when active */
+    position: absolute;
+    top: -50px;
+    left: 90%;
+    transform: translateX(-50%);
+    bottom: 3.5em; /* Place above the button */
+    width: max-content;
+    min-width: 200px;
+    padding: 1em 2em;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background-color: hsl(217, 19%, 35%);
+    align-items: center;
   }
 }
