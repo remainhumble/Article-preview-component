@@ -27,6 +27,7 @@ p {
   max-width: 100%;
   border-radius: 10px;
   background-color: #fff;
+  overflow: hidden;
 }
 
 #drawers > img {
@@ -128,7 +129,21 @@ time {
   position: absolute;
   top: 0;
   left: 0;
-  padding-left: 1.75em;
+
+}
+
+#socials.show:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-color: #000000 transparent;
+  border-width: 20px 20px 0;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -20px;
 }
 
 #socials > a {
@@ -144,10 +159,12 @@ time {
     width: 45rem;
     max-width: 100%;
     height: auto;
+    overflow: visible;
   }
 
   #drawers > img {
     height: 100%;
+    border-radius: 10px 0 0 10px;
   }
 
   #info {
@@ -167,6 +184,7 @@ time {
   #author {
     position: relative;
     z-index: 1; /* Add this line */
+    padding: 0 1.25em;
   }
   #author-info {
     display: flex;
@@ -175,7 +193,7 @@ time {
 
   #share-button {
     position: absolute;
-    top: 1.25em;
+    top: 0;
     right: 1.25em;
   }
 
@@ -193,5 +211,19 @@ time {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     background-color: hsl(217, 19%, 35%);
     align-items: center;
+  }
+
+  #socials.show:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: hsl(217, 19%, 35%) transparent;
+    border-width: 20px 20px 0;
+    bottom: -20px;
+    left: 55%;
+    margin-left: -20px;
   }
 }
